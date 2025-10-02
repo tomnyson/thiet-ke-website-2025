@@ -1,0 +1,459 @@
+<html>
+<title>layout</title>
+<style>
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* header {
+        background-color: #add8e6;
+        color: #fff;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    aside {
+        float: left;
+        width: 25%;
+    }
+    aside ul li {
+        list-style: none;
+    }
+    aside ul li a {
+        text-decoration: none;
+    }
+    section {
+        float: left;
+        background: #f1f1f1;
+    }
+    footer {
+        clear: both;
+        background-color: #add8e6;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+    }
+    main {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        min-height: 300px;
+    } */
+    /**flex box */
+
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    body {
+        line-height: 1;
+    }
+
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    blockquote,
+    q {
+        quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    /* header {
+        background-color: #f98135;
+        color: #fff;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    section {
+        background: #f1f1f1;
+        flex: 6;
+    }
+
+    footer {
+        background-color: #add8e6;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    main {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        min-height: 300px;
+        display: flex;
+        justify-content: flex-start;
+        flex: 4;
+        width: 100%;
+    }
+
+    section {
+        overflow: scroll;
+    }
+
+    ul {
+        display: flex;
+        text-decoration: none;
+        list-style: none;
+        padding-left: 5%;
+    }
+
+    ul a {
+        text-decoration: none;
+        margin-right: 20px;
+        color: #000;
+        font-weight: 500;
+    }
+
+    ul a:hover {
+        color: #f98135;
+        background-color: #fdeee6;
+        border-radius: 20px;
+        padding: 5px;
+    }
+
+    header img {
+        width: 100px;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    header h1 {
+        font-size: 20px;
+    } */
+
+    header {
+        height: 200px;
+        width: 100%;
+        background-image: url('https://scontent.fbmv1-1.fna.fbcdn.net/v/t39.30808-6/384114182_708949734608115_6980345343275931896_n.png?stp=dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=86c6b0&_nc_ohc=ypPO8MZytDEQ7kNvwGry8fF&_nc_oc=AdnJpUxLazg5mbh4VQYIZ_4XeHRl_t32N8ISBTK5RSvH6dasqyx-djWc_v5rk4HP76M&_nc_zt=23&_nc_ht=scontent.fbmv1-1.fna&_nc_gid=Uh_uUIAUB3x9D_QiGoSLnQ&oh=00_AfaEHy_0avl910Gjb5tf60X5TkeRtqWiwdwnHwVxgrJ36g&oe=68DD960A');
+        background-position: center;
+    }
+
+    nav {}
+
+    nav ul {
+        background-color: red;
+        padding: 15px;
+    }
+
+    nav ul li {
+        display: inline;
+        padding: 8px 0 8px 5%;
+
+
+    }
+
+    nav ul a {
+        text-decoration: none;
+        color: white;
+        border-right: 1px solid white;
+        padding-right: 10px;
+    }
+
+    nav ul a:last-child {
+        /* border-right: none;
+        padding-right: 10px; */
+    }
+
+    nav ul li:last-child a {
+        border: none;
+    }
+
+    footer {
+        padding-bottom: 50px;
+        padding-top: 50px;
+        text-align: center;
+        background-color: aqua;
+    }
+
+    aside {
+        display: flex;
+        justify-content: right;
+    }
+
+    aside ul {
+        background-color: rgb(245, 235, 235);
+        height: 500px;
+        padding: 40px;
+    }
+
+    aside ul li {
+        list-style: disc;
+    }
+
+    footer {
+        background-color: rgb(150, 205, 205);
+        padding: 20px;
+        text-align: center;
+    }
+
+    .sp img {
+        object-fit: center;
+        width: 300px;
+        height: 300px;
+    }
+
+    div.ban {
+        position: absolute;
+        color: red;
+        top: 0;
+        right: 0;
+        background-color: gold;
+    }
+
+    .sp {
+        position: relative;
+    }
+
+    .sub_menu {
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        position: absolute;
+        background-color: red;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+    }
+
+    ul li {
+        position: relative;
+    }
+
+
+    .sub_menu li a {
+        border: none;
+        display: block;
+        padding: 5px;
+    }
+
+    ul>li:hover>.sub_menu {
+        display: block;
+    }
+
+    ul>li>.sub_menu>li:hover a {
+        background-color: white;
+        color: red;
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <header>
+
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="#">Giới thiệu</a>
+                </li>
+                <li>
+                    <a href="#">Ngành học</a>
+                    <ul class="sub_menu">
+                        <li>
+                            <a href="#">CNTT</a>
+                        </li>
+                        <li>
+                            <a href="#">Kinh tế</a>
+                        </li>
+                        <li>
+                            <a href="#">Thiết kế đồ hoạ</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Tin tức</a>
+                </li>
+                <li>
+                    <a href="#">Tuyển sinh</a>
+                    <ul class="sub_menu">
+                        <li>
+                            <a href="#">Cao Đẳng</a>
+                        </li>
+                        <li>
+                            <a href="#">Phổ Cao</a>
+                        </li>
+                        <li>
+                            <a href="#">Thiết kế đồ hoạ</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Hỗ trợ</a>
+                </li>
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+        </main>
+        <aside>
+            <div class="trong">
+
+                <section>
+                    <div class="sp">
+                        <img src="/images/game.jpeg" alt="">
+                        <p>ABC</p>
+                        <P>100.000</P>
+                        <div class="ban">Ban chay</div>
+                    </div>
+                </section>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">May tinh sach tay</a>
+                </li>
+                <li>
+                    <a href="#">Dien thoai di dong</a>
+                </li>
+                <li>
+                    <a href="#">may quay phim</a>
+                </li>
+                <li>
+                    <a href="#">
+                        May chup anh
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <footer>
+            <p>FPT Polytechnic@2017.All right reserved.</p>
+        </footer>
+        <div class="float_btn">
+            <button>scroll here</button>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

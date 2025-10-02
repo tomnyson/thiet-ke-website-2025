@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<title>Menu 1 cấp</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, sans-serif; }
+  .nav {
+    background: #111827;
+  }
+  .nav__list {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px 16px;
+  }
+  .nav__link {
+    color: #e5e7eb;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+    display: block;
+  }
+  .nav__link:hover,
+  .nav__link:focus {
+    background: #1f2937;
+    color: #fff;
+    outline: none;
+  }
+
+  /* Responsive: chuyển sang stack dọc dưới 640px */
+  @media (max-width: 640px) {
+    .nav__list { flex-direction: column; gap: 8px; }
+    .nav__link { padding: 10px 12px; }
+  }
+</style>
+</head>
+<body>
+  <nav class="nav" aria-label="Chính">
+    <ul class="nav__list">
+      <li><a class="nav__link" href="#">Trang chủ</a></li>
+      <li><a class="nav__link" href="#">Giới thiệu</a></li>
+      <li><a class="nav__link" href="#">Dịch vụ</a></li>
+      <li><a class="nav__link" href="#">Tin tức</a></li>
+      <li><a class="nav__link" href="#">Liên hệ</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

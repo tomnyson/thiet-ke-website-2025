@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mega Menu – Flexbox only</title>
+<style>
+  /* Base */
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0b1020;color:#e5e7eb}
+  a{text-decoration:none;color:inherit}
+  .container{max-width:1200px;margin:0 auto;padding:0 16px}
+
+  /* Top bar */
+  .nav{background:#0f172a;position:relative}
+  .nav__wrap{display:flex;align-items:center;gap:20px;height:56px}
+  .brand{font-weight:700;letter-spacing:.3px}
+  .nav__list{list-style:none;display:flex;gap:18px;margin-left:auto}
+  .nav__item{position:relative}
+  .nav__link{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;color:#e5e7eb}
+  .nav__link:hover,.nav__link:focus{background:#1b2440;outline:none}
+  .has-mega>.nav__link::after{content:"▾";font-size:.8em;margin-left:6px}
+
+  /* Mega (desktop) */
+  .mega{position:absolute;left:0;right:0;top:100%;opacity:0;visibility:hidden;transform:translateY(8px);
+        transition:opacity .18s ease,transform .18s ease,visibility .18s;z-index:30}
+  .nav__item:hover>.mega,
+  .nav__item:focus-within>.mega{opacity:1;visibility:visible;transform:translateY(0)}
+  .mega__panel{background:#0b1224;border:1px solid #26304d;border-radius:16px;margin-top:10px;padding:18px;box-shadow:0 16px 40px rgba(0,0,0,.35)}
+
+  /* Flex row cho toàn bộ mega */
+  .mega__row{display:flex;gap:20px;align-items:stretch}
+
+  /* Cột trái (danh mục) – width cố định bằng flex-basis */
+  .mega__left{flex:0 0 220px}
+  .mega__center{flex:1 1 auto;min-width:0}
+  .mega__right{flex:0 0 320px}
+
+  /* Danh mục trái */
+  .mega__title{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:#9fb3ff;margin-bottom:10px}
+  .menu-links{list-style:none;display:flex;flex-direction:column;gap:6px}
+  .menu-links a{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;color:#e5e7eb}
+  .menu-links a:hover,.menu-links a:focus{background:#111a33}
+  .tag{font-size:11px;padding:2px 6px;border-radius:999px;background:#1f2b52;color:#bcd0ff;margin-left:auto}
+
+  /* Nổi bật (giữa) – dùng flex wrap thay vì grid */
+  .featured{display:flex;flex-wrap:wrap;gap:12px}
+  .card{flex:1 1 calc(33.333% - 8px); /* 3 cột linh hoạt */ min-width:200px; background:#0e1730;border:1px solid #223055;border-radius:12px;overflow:hidden}
+  .card a{display:block}
+  .thumb{aspect-ratio:16/9;background:#1a264a}
+  .card-content{padding:10px}
+  .card h5{font-size:14px;line-height:1.35;margin-bottom:4px}
+  .meta{font-size:12px;color:#a9b6d8}
+
+  /* Promo (phải) */
+  .promo{border-radius:14px;overflow:hidden;background:linear-gradient(135deg,#1b2a56,#0e1730);height:100%}
+  .promo__inner{display:flex;flex-direction:column;gap:10px;padding:16px;height:100%}
+  .promo h3{font-size:18px}
+  .btn{display:inline-block;margin-top:6px;background:#3b82f6;color:#fff;padding:8px 12px;border-radius:10px;font-weight:600}
+  .btn:hover,.btn:focus{filter:brightness(1.1);outline:none}
+  .promo small{opacity:.8;margin-top:auto}
+
+  /* Mobile (≤ 900px): stack + accordion) */
+  @media (max-width:900px){
+    .nav__wrap{height:auto;flex-wrap:wrap;padding:10px 0}
+    .nav__list{flex-direction:column;gap:8px;width:100%;margin-left:0}
+    .nav__item{width:100%}
+    .nav__link{width:100%;background:#0e1730;border:1px solid #223055}
+    /* Hiển thị mega theo accordion */
+    .mega{position:static;opacity:1;visibility:visible;transform:none;margin-top:8px}
+    .mega__panel{margin-top:0;border-radius:12px}
+    .mega__row{flex-direction:column}
+    .mega__left,.mega__center,.mega__right{flex:1 1 auto}
+    .featured .card{flex:1 1 calc(50% - 6px)} /* 2 cột trên mobile */
+    /* Checkbox toggle */
+    .toggle{position:absolute;opacity:0;pointer-events:none}
+    .toggle + .nav__link + .mega{display:none}
+    .toggle:checked + .nav__link + .mega{display:block}
+    .has-mega>.nav__link::after{content:"▾";margin-left:auto}
+    .toggle:checked + .nav__link::after{transform:rotate(180deg)}
+  }
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav__wrap">
+    <div class="brand">MyShop</div>
+
+    <ul class="nav__list" aria-label="Chính">
+      <li class="nav__item"><a class="nav__link" href="#">Trang chủ</a></li>
+
+      <!-- MEGA: Sản phẩm (FLEXBOX ONLY) -->
+      <li class="nav__item has-mega">
+        <!-- Mobile toggle -->
+        <input class="toggle" type="checkbox" id="mega-products">
+        <label class="nav__link" for="mega-products" aria-haspopup="true" aria-expanded="false">Sản phẩm</label>
+
+        <div class="mega" aria-label="Mega Sản phẩm">
+          <div class="container mega__panel">
+            <div class="mega__row">
+              <!-- Trái -->
+              <section class="mega__left">
+                <h4 class="mega__title">Danh mục chính</h4>
+                <ul class="menu-links">
+                  <li><a href="#">Mũ bảo hiểm <span class="tag">Mới</span></a></li>
+                  <li><a href="#">Áo mưa</a></li>
+                  <li><a href="#">Găng tay</a></li>
+                  <li><a href="#">Kính – Phụ kiện</a></li>
+                  <li><a href="#">Đồ bảo hộ</a></li>
+                </ul>
+              </section>
+
+              <!-- Giữa -->
+              <section class="mega__center">
+                <h4 class="mega__title">Nổi bật</h4>
+                <div class="featured">
+                  <article class="card">
+                    <a href="#">
+                      <div class="thumb" aria-hidden="true"></div>
+                      <div class="card-content">
+                        <h5>Mũ 3/4 Urban Lite</h5>
+                        <div class="meta">Giảm 15% • Hàng mới</div>
+                      </div>
+                    </a>
+                  </article>
+                  <article class="card">
+                    <a href="#">
+                      <div class="thumb"></div>
+                      <div class="card-content">
+                        <h5>Áo mưa Storm Pro</h5>
+                        <div class="meta">Chống thấm 10.000mm</div>
+                      </div>
+                    </a>
+                  </article>
+                  <article class="card">
+                    <a href="#">
+                      <div class="thumb"></div>
+                      <div class="card-content">
+                        <h5>Găng tay Air Mesh</h5>
+                        <div class="meta">Thoáng – bám tốt</div>
+                      </div>
+                    </a>
+                  </article>
+                </div>
+              </section>
+
+              <!-- Phải -->
+              <aside class="mega__right promo">
+                <div class="promo__inner">
+                  <div>
+                    <h3>Sale mưa –50%</h3>
+                    <p>Mua 2 tặng 1 cho dòng áo mưa Storm. Freeship toàn quốc.</p>
+                    <a class="btn" href="#">Mua ngay</a>
+                  </div>
+                  <small>Áp dụng đến 31/10 • Điều kiện kèm theo</small>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- MEGA: Dịch vụ (FLEXBOX ONLY) -->
+      <li class="nav__item has-mega">
+        <input class="toggle" type="checkbox" id="mega-services">
+        <label class="nav__link" for="mega-services" aria-haspopup="true" aria-expanded="false">Dịch vụ</label>
+
+        <div class="mega" aria-label="Mega Dịch vụ">
+          <div class="container mega__panel">
+            <div class="mega__row">
+              <section class="mega__left">
+                <h4 class="mega__title">Chăm sóc</h4>
+                <ul class="menu-links">
+                  <li><a href="#">Bảo hành mũ 12 tháng</a></li>
+                  <li><a href="#">Thay kính – phụ kiện</a></li>
+                  <li><a href="#">Vệ sinh – khử mùi</a></li>
+                </ul>
+              </section>
+              <section class="mega__center">
+                <h4 class="mega__title">Thiết kế & In ấn</h4>
+                <div class="featured">
+                  <article class="card">
+                    <a href="#"><div class="thumb"></div><div class="card-content"><h5>Thiết kế logo</h5><div class="meta">3 concept</div></div></a>
+                  </article>
+                  <article class="card">
+                    <a href="#"><div class="thumb"></div><div class="card-content"><h5>In áo mưa theo mẫu</h5><div class="meta">MOQ 50</div></div></a>
+                  </article>
+                </div>
+              </section>
+              <aside class="mega__right promo">
+                <div class="promo__inner">
+                  <div>
+                    <h3>Combo doanh nghiệp</h3>
+                    <p>Giảm thêm 10% khi đặt từ 100 sản phẩm.</p>
+                    <a class="btn" href="#">Nhận báo giá</a>
+                  </div>
+                  <small>Liên hệ để tư vấn chi tiết</small>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav__item"><a class="nav__link" href="#">Blog</a></li>
+      <li class="nav__item"><a class="nav__link" href="#">Liên hệ</a></li>
+    </ul>
+  </div>
+</header>
+</body>
+</html>

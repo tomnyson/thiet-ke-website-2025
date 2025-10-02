@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hỗ trợ - Cao đẳng FPT Polytechnic</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="logo-area">
+        <img src="images/school-campus.jpg" alt="Hỗ trợ sinh viên FPT Polytechnic" width="72" height="72" style="border-radius: 16px; object-fit: cover;">
+        <div class="logo-text">
+          <h1>Cao đẳng FPT Polytechnic</h1>
+          <p>Trung tâm hỗ trợ sinh viên &amp; phụ huynh</p>
+        </div>
+      </div>
+      <div class="badge">Hỗ trợ</div>
+    </div>
+  </header>
+
+  <button class="nav-toggle" data-nav-toggle>
+    <span></span>
+    Menu
+  </button>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+      <li><a href="nganh-hoc.html">Ngành học</a></li>
+      <li><a href="tin-tuc.html">Tin tức</a></li>
+      <li><a href="lien-he.html">Tuyển sinh</a></li>
+      <li><a href="ho-tro.html" class="active">Hỗ trợ</a></li>
+      <li><a href="hoi-dap.html">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h2>Trung tâm hỗ trợ 247</h2>
+        <p>Chúng tôi sẵn sàng lắng nghe và giải đáp mọi thắc mắc của phụ huynh, thí sinh và sinh viên về chương trình học, tài chính, ký túc xá và các vấn đề học vụ.</p>
+      </div>
+      <div class="cards-grid">
+        <article class="card">
+          <h3>Hỗ trợ tuyển sinh</h3>
+          <p>Tư vấn hồ sơ, học phí, chính sách học bổng, lịch nhập học.</p>
+        </article>
+        <article class="card">
+          <h3>Hỗ trợ học vụ</h3>
+          <p>Đăng ký tín chỉ, bảo lưu kết quả, chuyển đổi cơ sở, lịch thi.</p>
+        </article>
+        <article class="card">
+          <h3>Hỗ trợ đời sống</h3>
+          <p>Ký túc xá, câu lạc bộ, hoạt động ngoại khóa, tư vấn tâm lý.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="two-column">
+      <div>
+        <h2 class="section-title">Biểu mẫu hỗ trợ</h2>
+        <form data-ajax>
+          <label for="support-name">Họ và tên</label>
+          <input type="text" id="support-name" name="name" required>
+
+          <label for="support-role">Đối tượng</label>
+          <select id="support-role" name="role">
+            <option value="thi-sinh">Thí sinh</option>
+            <option value="phu-huynh">Phụ huynh</option>
+            <option value="sinh-vien">Sinh viên</option>
+            <option value="doi-tac">Đối tác</option>
+          </select>
+
+          <label>Loại hỗ trợ</label>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <label><input type="radio" name="support-type" value="tuyen-sinh" required> Tuyển sinh</label>
+            <label><input type="radio" name="support-type" value="hoc-vu"> Học vụ</label>
+            <label><input type="radio" name="support-type" value="tai-chinh"> Tài chính</label>
+            <label><input type="radio" name="support-type" value="doi-song"> Đời sống</label>
+          </div>
+
+          <label for="support-topics">Vấn đề quan tâm</label>
+          <div style="display: grid; gap: 0.3rem;">
+            <label><input type="checkbox" name="topics" value="hoc-phi"> Học phí &amp; học bổng</label>
+            <label><input type="checkbox" name="topics" value="ky-tuc-xa"> Ký túc xá</label>
+            <label><input type="checkbox" name="topics" value="lich-hoc"> Lịch học &amp; thi</label>
+            <label><input type="checkbox" name="topics" value="hoat-dong"> Hoạt động sinh viên</label>
+          </div>
+
+          <label for="support-message">Nội dung yêu cầu</label>
+          <textarea id="support-message" name="message" rows="5" required></textarea>
+
+          <label for="support-time">Thời gian phản hồi mong muốn</label>
+          <textarea id="support-time" name="suggestion" rows="3" placeholder="VD: Liên hệ trước 17h, ngày 15/04"></textarea>
+
+          <button type="submit" class="button">Gửi yêu cầu</button>
+          <p class="form-message" style="margin:0; color: var(--secondary-color);"></p>
+        </form>
+      </div>
+      <aside class="control-panel">
+        <h3>Kênh hỗ trợ nhanh</h3>
+        <ul>
+          <li>Hotline 24/7: 0981 967 890</li>
+          <li>Zalo: FPT Polytechnic Support</li>
+          <li>Email: support@fptpoly.edu.vn</li>
+          <li>Fanpage: fb.com/caodangfptpoly</li>
+        </ul>
+        <div class="alert">
+          Yêu cầu khẩn cấp (an toàn sinh viên, y tế, nội trú) vui lòng gọi hotline để được hỗ trợ ngay.</div>
+      </aside>
+    </section>
+
+    <section>
+      <h2 class="section-title">Các đầu mối hỗ trợ</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <h3>Phòng học vụ</h3>
+          <p>Email: hocvu@fptpoly.edu.vn<br>Hotline: 0981 967 885</p>
+        </article>
+        <article class="card">
+          <h3>Phòng công tác sinh viên</h3>
+          <p>Email: ctsv@fptpoly.edu.vn<br>Hotline: 0981 451 999</p>
+        </article>
+        <article class="card">
+          <h3>Trung tâm ký túc xá</h3>
+          <p>Email: ktg@fptpoly.edu.vn<br>Hotline: 0981 223 345</p>
+        </article>
+        <article class="card">
+          <h3>Ban truyền thông</h3>
+          <p>Email: media@fptpoly.edu.vn<br>Hotline: 0966 222 444</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-section">
+        <h4>Trung tâm hỗ trợ</h4>
+        <p>Phòng A101, Tòa nhà FPT Polytechnic</p>
+      </div>
+      <div class="footer-section">
+        <h4>Tài liệu</h4>
+        <ul>
+          <li>Cẩm nang sinh viên</li>
+          <li>Quy chế học vụ</li>
+          <li>Quy định ký túc xá</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Cộng đồng</h4>
+        <ul>
+          <li>Group Facebook phụ huynh Poly</li>
+          <li>Poly Student Portal</li>
+          <li>Poly Alumni Network</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span class="js-year"></span> Cao đẳng FPT Polytechnic.</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

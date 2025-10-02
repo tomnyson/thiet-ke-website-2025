@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<title>Menu 2 cấp</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, sans-serif; }
+  .nav {
+    background: #0f172a;
+  }
+  .nav__list {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    position: relative;
+  }
+  .nav__item { position: relative; }
+  .nav__link, .nav__sublink {
+    color: #e5e7eb;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+    display: block;
+    white-space: nowrap;
+  }
+  .nav__link:hover, .nav__link:focus,
+  .nav__sublink:hover, .nav__sublink:focus {
+    background: #1f2937;
+    color: #fff;
+    outline: none;
+  }
+
+  /* Dropdown panel */
+  .nav__submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%; left: 0;
+    min-width: 180px;
+    background: #0b1220;
+    border: 1px solid #22304a;
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity .18s ease, transform .18s ease, visibility .18s;
+    z-index: 20;
+  }
+
+  /* Hiển thị submenu khi hover hoặc focus-within (hỗ trợ bàn phím) */
+  .nav__item:hover > .nav__submenu,
+  .nav__item:focus-within > .nav__submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Responsive nhỏ: xếp dọc */
+  @media (max-width: 720px) {
+    .nav__list { flex-direction: column; gap: 8px; }
+    .nav__item { width: 100%; }
+    .nav__submenu { position: static; transform: none; box-shadow: none; border-radius: 8px; opacity: 1; visibility: visible; border: 1px dashed #22304a; }
+  }
+</style>
+</head>
+<body>
+  <nav class="nav" aria-label="Chính">
+    <ul class="nav__list">
+      <li class="nav__item"><a href="#" class="nav__link">Trang chủ</a></li>
+
+      <li class="nav__item">
+        <a href="#" class="nav__link" aria-haspopup="true" aria-expanded="false">Sản phẩm</a>
+        <ul class="nav__submenu" aria-label="Sản phẩm">
+          <li><a class="nav__sublink" href="#">Mũ bảo hiểm</a></li>
+          <li><a class="nav__sublink" href="#">Áo mưa</a></li>
+          <li><a class="nav__sublink" href="#">Phụ kiện</a></li>
+        </ul>
+      </li>
+
+      <li class="nav__item">
+        <a href="#" class="nav__link" aria-haspopup="true" aria-expanded="false">Dịch vụ</a>
+        <ul class="nav__submenu" aria-label="Dịch vụ">
+          <li><a class="nav__sublink" href="#">Thiết kế logo</a></li>
+          <li><a class="nav__sublink" href="#">In ấn</a></li>
+          <li><a class="nav__sublink" href="#">Bảo hành</a></li>
+        </ul>
+      </li>
+
+      <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Liên hệ</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Cao đẳng FPT Polytechnic</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="logo-area">
+        <img src="images/school-campus.jpg" alt="FAQ Cao đẳng FPT Polytechnic" width="72" height="72" style="border-radius: 16px; object-fit: cover;">
+        <div class="logo-text">
+          <h1>Cao đẳng FPT Polytechnic</h1>
+          <p>Giải đáp thắc mắc</p>
+        </div>
+      </div>
+      <div class="badge">FAQ</div>
+    </div>
+  </header>
+
+  <button class="nav-toggle" data-nav-toggle>
+    <span></span>
+    Menu
+  </button>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+      <li><a href="nganh-hoc.html">Ngành học</a></li>
+      <li><a href="tin-tuc.html">Tin tức</a></li>
+      <li><a href="lien-he.html">Tuyển sinh</a></li>
+      <li><a href="ho-tro.html">Hỗ trợ</a></li>
+      <li><a href="hoi-dap.html" class="active">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h2>Câu hỏi thường gặp</h2>
+        <p>Tổng hợp thắc mắc liên quan đến tuyển sinh, chương trình học, học phí và đời sống sinh viên tại FPT Polytechnic.</p>
+      </div>
+      <div class="cards-grid">
+        <article class="card">
+          <h3>Tuyển sinh</h3>
+          <p>Điều kiện, thủ tục, lịch tuyển sinh, xét học bạ.</p>
+        </article>
+        <article class="card">
+          <h3>Chương trình học</h3>
+          <p>Thời khóa biểu, tỉ lệ thực hành, liên thông đại học.</p>
+        </article>
+        <article class="card">
+          <h3>Học phí &amp; hỗ trợ</h3>
+          <p>Chính sách học phí, học bổng, hỗ trợ tài chính.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="two-column">
+      <div>
+        <h2 class="section-title">FAQ tuyển sinh</h2>
+        <div class="faq">
+          <article class="faq-item">
+            <h3>1. Điều kiện xét tuyển FPT Polytechnic?</h3>
+            <p>Thí sinh tốt nghiệp THPT hoặc tương đương, nộp học bạ và tham gia phỏng vấn Poly Interview.</p>
+          </article>
+          <article class="faq-item">
+            <h3>2. Hồ sơ cần chuẩn bị gồm những gì?</h3>
+            <p>Bản sao học bạ, bằng tốt nghiệp hoặc giấy chứng nhận tốt nghiệp tạm thời, CMND/CCCD, 04 ảnh 3x4.</p>
+          </article>
+          <article class="faq-item">
+            <h3>3. Khi nào có kết quả xét tuyển?</h3>
+            <p>Trong vòng 5 ngày làm việc sau khi hoàn thành hồ sơ và phỏng vấn, kết quả được gửi qua email và SMS.</p>
+          </article>
+        </div>
+      </div>
+      <aside class="control-panel">
+        <h3>FAQ học tập</h3>
+        <div class="faq">
+          <article class="faq-item">
+            <h3>4. Thời khóa biểu được sắp xếp thế nào?</h3>
+            <p>Theo ca học (sáng, chiều, tối) với 70% thực hành, lịch học được cập nhật trên Poly Portal.</p>
+          </article>
+          <article class="faq-item">
+            <h3>5. Có thể chuyển ngành hoặc cơ sở không?</h3>
+            <p>Có. Sinh viên có thể chuyển ngành/cơ sở sau khi hoàn thành ít nhất 1 học kỳ và đáp ứng điều kiện học vụ.</p>
+          </article>
+          <article class="faq-item">
+            <h3>6. Cơ hội việc làm sau tốt nghiệp?</h3>
+            <p>97% sinh viên có việc làm trong 6 tháng, được kết nối doanh nghiệp qua Poly Career Hub.</p>
+          </article>
+        </div>
+      </aside>
+    </section>
+
+    <section>
+      <h2 class="section-title">Gửi câu hỏi nhanh</h2>
+      <p class="text-lead">Nếu câu hỏi của bạn chưa có trong danh sách, hãy gửi ngay cho chúng tôi.</p>
+      <form data-ajax>
+        <label for="faq-name">Tên</label>
+        <input type="text" id="faq-name" name="name" required>
+
+        <label for="faq-email">Email</label>
+        <input type="email" id="faq-email" name="email" required>
+
+        <label for="faq-question">Câu hỏi</label>
+        <textarea id="faq-question" name="question" rows="4" required></textarea>
+
+        <button type="submit" class="button">Gửi câu hỏi</button>
+        <p class="form-message" style="margin:0; color: var(--secondary-color);"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-section">
+        <h4>Hỗ trợ FAQ</h4>
+        <p>Hotline: 0981 967 890</p>
+        <p>Email: faq@fptpoly.edu.vn</p>
+      </div>
+      <div class="footer-section">
+        <h4>Kênh thông tin</h4>
+        <ul>
+          <li>Poly Portal</li>
+          <li>Fanpage: fb.com/caodangfptpoly</li>
+          <li>Zalo: FPT Polytechnic</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Liên kết</h4>
+        <ul>
+          <li><a href="lien-he.html">Đăng ký tuyển sinh</a></li>
+          <li><a href="ho-tro.html">Yêu cầu hỗ trợ</a></li>
+          <li><a href="tin-tuc.html">Tin tức mới</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span class="js-year"></span> Cao đẳng FPT Polytechnic.</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

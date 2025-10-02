@@ -1,0 +1,254 @@
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+  }
+
+  /* HTML5 display-role reset for older browsers */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+      display: block;
+  }
+
+  body {
+      line-height: 1;
+  }
+
+  ol,
+  ul {
+      list-style: none;
+  }
+
+  blockquote,
+  q {
+      quotes: none;
+  }
+
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+      content: '';
+      content: none;
+  }
+
+  table {
+      border-collapse: collapse;
+      border-spacing: 0;
+  }
+
+  h1 {
+      font-family: "Quicksand", sans-serif;
+      font-size: 40px;
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 20px;
+
+  }
+
+  p {
+      color: #fff;
+      font-family: "Quicksand", sans-serif;
+  }
+
+  header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 500px;
+      background-image: url('./background.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+  }
+
+  .map iframe {
+      height: 350px;
+      width: 100%;
+      margin-top: 50px;
+      margin-bottom: 50px;
+  }
+
+  .form {
+      display: flex;
+      justify-content: center;
+  }
+
+  .form section {
+      flex: 6;
+  }
+
+  .form aside {
+      flex: 4;
+  }
+
+  .form h1 {
+      color: black;
+      font-size: 25px;
+  }
+
+  .form aside ul li {
+      list-style-type: disc;
+  }
+
+  .form aside ul li p {
+      padding: 10px;
+      color: black;
+  }
+
+  .container {
+      width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 50px;
+  }
+
+  .form-top {
+      width: 600px;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .form-top input,
+  .form-top button {
+      display: block;
+      padding: 10px 5px 10px 5px;
+      margin-bottom: 5px;
+      width: 100%;
+
+  }
+
+  .form-top input,
+  textarea {
+      border: none;
+      border-bottom: 2px solid #ccc;
+
+  }
+
+  .form-top input:focus {
+      border: none;
+      border-bottom: 2px solid #333;
+      outline: none;
+  }
+
+  .form-top div {
+      width: 280px;
+  }
+
+  /* .form-top textarea {
+     border: none ;
+    border-bottom: 2px solid #ccc;
+} */
+  textarea {
+      display: block;
+      width: 80%;
+      margin-top: 20px;
+  }
+
+  textarea:focus {
+      outline: none;
+      border-bottom: 2px solid #333;
+  }
+
+  button[type="submit"] {
+    background: #486830;
+    text-align: center;
+    padding: 5px 40px;
+    color: white;
+
+    margin-top: 20px;
+  }

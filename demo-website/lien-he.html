@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuyển sinh - Cao đẳng FPT Polytechnic</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="logo-area">
+        <img src="images/school-campus.jpg" alt="Tuyển sinh FPT Polytechnic" width="72" height="72" style="border-radius: 16px; object-fit: cover;">
+        <div class="logo-text">
+          <h1>Cao đẳng FPT Polytechnic</h1>
+          <p>Tuyển sinh khóa 20.3</p>
+        </div>
+      </div>
+      <div class="badge">Tuyển sinh</div>
+    </div>
+  </header>
+
+  <button class="nav-toggle" data-nav-toggle>
+    <span></span>
+    Menu
+  </button>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+      <li><a href="nganh-hoc.html">Ngành học</a></li>
+      <li><a href="tin-tuc.html">Tin tức</a></li>
+      <li><a href="lien-he.html" class="active">Tuyển sinh</a></li>
+      <li><a href="ho-tro.html">Hỗ trợ</a></li>
+      <li><a href="hoi-dap.html">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h2>Thông tin tuyển sinh 2024</h2>
+        <p>Cao đẳng FPT Polytechnic tuyển sinh hệ chính quy với phương châm “Học nhanh – Làm sớm”, nhận hồ sơ online và trực tiếp trên toàn quốc.</p>
+      </div>
+      <div class="cards-grid">
+        <article class="card">
+          <h3>Chỉ tiêu</h3>
+          <p>12.000 chỉ tiêu toàn quốc cho 27 ngành thuộc 5 khối.</p>
+        </article>
+        <article class="card">
+          <h3>Đối tượng</h3>
+          <p>Thí sinh tốt nghiệp THPT hoặc tương đương, yêu thích mô hình học tập thực hành.</p>
+        </article>
+        <article class="card">
+          <h3>Phương thức</h3>
+          <p>Xét tuyển học bạ + Phỏng vấn năng lực (Poly Interview) hoặc điểm thi THPT.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="two-column">
+      <div>
+        <h2 class="section-title">Đăng ký tuyển sinh trực tuyến</h2>
+        <p class="text-lead">Điền đầy đủ thông tin, phòng tuyển sinh sẽ liên hệ xác nhận lịch hẹn và hướng dẫn nộp hồ sơ.</p>
+        <form data-ajax>
+          <label for="contact-name">Họ và tên thí sinh</label>
+          <input type="text" id="contact-name" name="name" required>
+
+          <label for="contact-parent">Người liên hệ</label>
+          <input type="text" id="contact-parent" name="parent" placeholder="Tên phụ huynh hoặc người bảo trợ">
+
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" required>
+
+          <label for="contact-phone">Số điện thoại</label>
+          <input type="tel" id="contact-phone" name="phone" placeholder="09xx xxx xxx" required>
+
+          <label for="contact-campus">Cơ sở mong muốn</label>
+          <select id="contact-campus" name="campus">
+            <option value="ha-noi">Hà Nội</option>
+            <option value="ho-chi-minh">TP. Hồ Chí Minh</option>
+            <option value="da-nang">Đà Nẵng</option>
+            <option value="can-tho">Cần Thơ</option>
+            <option value="tay-nguyen">Tây Nguyên</option>
+            <option value="hai-phong">Hải Phòng</option>
+          </select>
+
+          <label for="contact-message">Ngành học quan tâm</label>
+          <textarea id="contact-message" name="message" rows="4" placeholder="VD: Digital Marketing, Lập trình Mobile" required></textarea>
+
+          <button type="submit" class="button">Đăng ký ngay</button>
+          <p class="form-message" style="margin:0; color: var(--secondary-color);"></p>
+        </form>
+      </div>
+      <aside class="control-panel">
+        <h3>Phòng tuyển sinh</h3>
+        <p>Hotline: 0981 967 890</p>
+        <p>Email: tuyensinh@fptpoly.edu.vn</p>
+        <div class="highlight-box">
+          <strong>Thời gian làm việc:</strong>
+          <p>Thứ 2 - Thứ 7: 8h00 - 17h30<br>Chủ nhật: hỗ trợ qua hotline</p>
+        </div>
+        <div class="alert" style="margin-top: 1rem;">
+          Ưu đãi Early Bird: Hoàn thành hồ sơ trước 30/05 nhận ưu đãi 30% học phí học kỳ I.</div>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-section">
+        <h4>Văn phòng tuyển sinh</h4>
+        <p>Tòa nhà FPT Polytechnic, Phố Trịnh Văn Bô, Nam Từ Liêm, Hà Nội</p>
+      </div>
+      <div class="footer-section">
+        <h4>Kênh tư vấn</h4>
+        <p>Zalo: FPT Polytechnic Admissions</p>
+        <p>Facebook: fb.com/caodangfptpoly</p>
+      </div>
+      <div class="footer-section">
+        <h4>Tài liệu cần chuẩn bị</h4>
+        <ul>
+          <li>Bản sao học bạ THPT</li>
+          <li>Bằng tốt nghiệp hoặc giấy CNTN</li>
+          <li>CMND/CCCD</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span class="js-year"></span> Cao đẳng FPT Polytechnic.</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

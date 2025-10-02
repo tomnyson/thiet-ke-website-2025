@@ -1,0 +1,285 @@
+<html>
+<title>layout</title>
+<style>
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* header {
+        background-color: #add8e6;
+        color: #fff;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    aside {
+        float: left;
+        width: 25%;
+    }
+    aside ul li {
+        list-style: none;
+    }
+    aside ul li a {
+        text-decoration: none;
+    }
+    section {
+        float: left;
+        background: #f1f1f1;
+    }
+    footer {
+        clear: both;
+        background-color: #add8e6;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+    }
+    main {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        min-height: 300px;
+    } */
+    /**flex box */
+
+    header {
+        background-color: #add8e6;
+        color: #fff;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    aside {
+        flex: 2;
+    }
+
+    aside ul li {
+        list-style: none;
+    }
+
+    aside ul li a {
+        text-decoration: none;
+    }
+     aside ul li a:hover {
+        color: orange;
+        font-weight: bold;
+     }
+
+    section {
+        background: #f1f1f1;
+        flex: 6;
+    }
+
+    footer {
+        background-color: #add8e6;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    main {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        min-height: 300px;
+        display: flex;
+        justify-content: flex-start;
+        flex: 4;
+        width: 100%;
+    }
+
+    section {
+        overflow: scroll;
+    }
+
+    .float_btn {
+        position: fixed;
+        top: 10;
+        left: 0;
+    }
+    .position {
+        border:2px solid green;
+        background: #ccc;
+        width: 250px;
+        height: 250px;
+        position: relative;
+    }
+    .position img {
+        width: 100px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 999;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Heading here</h1>
+        </header>
+        <!-- <nav>
+            <ul>
+                <li>
+                    <a href="#">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="#">Giới thiệu</a>
+                </li>
+                <li>
+                    <a href="#">Liên hệ</a>
+                </li>
+            </ul>
+        </nav> -->
+        <main>
+            <!--noi dung chinh -->
+            <aside>
+                <ul>
+                    <li>
+                        <a href="#">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="#">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="#">Liên hệ</a>
+                    </li>
+                </ul>
+            </aside>
+            <section>
+                <article>
+                    <p>
+                        SKĐS - Lúc 13h chiều nay, bão số 10 duy trì mạnh cấp 13, giật cấp 15, di chuyển Tây Tây Bắc
+                        30-35km/h. Hoàn lưu rộng của bão cũng gây mưa trên phạm vi cả nước từ chiều 28 đến 30/9, lượng
+                        mưa phổ biến 100-300mm; riêng Thanh Hóa, Hà Tĩnh khoảng 400mm, cục bộ 600mm.
+                        Bão số 10 đang giật cấp 15 trên Biển ĐôngBão số 10 đang giật cấp 15 trên Biển Đông
+                        SKĐS - lúc 10h sáng nay, bão số 10 ở vào khoảng 14.4 độ Vĩ Bắc; 115.1 độ Kinh Đông, cách đặc khu
+                        Hoàng Sa khoảng 400km về phía Đông Đông Nam với sức gió mạnh nhất giật cấp 15.
+
+                        Vùng biển từ Thanh Hoá đến Quảng Ngãi có gió mạnh dần từ chiều tối nay
+                        Theo Trung tâm Dự báo Khí tượng Thủy văn Quốc gia, lúc 13h chiều nay, bão số 10 duy trì mạnh cấp
+                        13, giật cấp 15, di chuyển Tây Tây Bắc 30-35km/h. Đây là cơn bão di chuyển rất nhanh (gần gấp
+                        đôi tốc độ trung bình), cường độ bão mạnh, phạm vi ảnh hưởng rộng, có thể gây tác động tổng
+                        hợp của nhiều loại hình thiên tai như gió mạnh, mưa lớn, lũ, lũ quét, sạt lở đất và ngập lụt
+                        ven biển.
+
+                        Lúc 10 giờ ngày 28/9, bão di chuyển theo hướng Tây Tây Bắc với tốc độ khoảng 30km/h và có khả
+                        năng mạnh lên. Vị trí tâm bão ở 16,9 độ vĩ Bắc – 108,8 độ kinh Đông, trên vùng biển Nam Quảng
+                        Trị – Quảng Ngãi, cách TP. Huế khoảng 120km về phía Đông Đông Bắc. Sức gió mạnh cấp 12–13, giật
+                        cấp 16. Phạm vi ảnh hưởng trải rộng từ vĩ tuyến 12,5 đến 20,0 độ Bắc, phía Tây kinh tuyến 117,0
+                        độ Đông. Cấp độ rủi ro thiên tai được xác định ở cấp 3 cho khu vực Bắc và Giữa Biển Đông (bao
+                        gồm quần đảo Hoàng Sa), cũng như vùng biển từ Hà Tĩnh đến Quảng Ngãi.
+
+                        Bão số 10 gây sóng lớn, gió mạnh trên biển từ chiều tối nay- Ảnh 2.
+                        Từ chiều tối nay trên biển có gió mạnh, sóng lớn do bão số 10.
+
+                        Đến 22 giờ cùng ngày, bão tiếp tục di chuyển theo hướng Tây Tây Bắc với tốc độ 20–25km/h. Vị trí
+                        tâm bão ở 18,0 độ vĩ Bắc – 106,6 độ kinh Đông, trên vùng biển ven bờ từ Nghệ An đến Quảng Trị.
+                        Sức gió mạnh cấp 12, giật cấp 15. Phạm vi ảnh hưởng được ghi nhận ở phía Bắc vĩ tuyến 14,0 độ
+                        Bắc và phía Tây kinh tuyến 111,5 độ Đông. Ở thời điểm này, cấp độ rủi ro thiên tai được nâng lên
+                        cấp 4 đối với khu vực đất liền ven biển từ Nghệ An đến phía Bắc Quảng Trị.
+
+                        Cấp độ rủi ro thiên tai cấp 3 vẫn được duy trì tại vùng biển phía Tây khu vực Bắc Biển Đông (bao
+                        gồm Hoàng Sa), phía Tây Bắc khu vực Giữa Biển Đông, vùng biển từ Thanh Hóa đến Quảng Ngãi (bao
+                        gồm đảo Hòn Ngư, Cồn Cỏ và Lý Sơn), cũng như Bắc vịnh Bắc Bộ (bao gồm Bạch Long Vỹ, Vân Đồn, Cô
+                        Tô, Cát Hải và đảo Hòn Dấu). Ngoài ra, khu vực đất liền từ Ninh Bình đến TP. Huế cũng nằm trong
+                        phạm vi chịu ảnh hưởng.
+
+                        Lúc 10 giờ ngày 29/9, bão di chuyển theo hướng Tây Tây Bắc với tốc độ 20–25km/h và suy yếu thành
+                        áp thấp nhiệt đới. Vị trí tâm áp thấp ở khoảng 19,2 độ vĩ Bắc – 104,3 độ kinh Đông, trên khu vực
+                        biên giới Việt Nam – Lào. Sức gió mạnh cấp 8, giật cấp 10. Phạm vi ảnh hưởng trải rộng về phía
+                        Bắc đến vĩ tuyến 15,5 độ Bắc và phía Tây đến kinh tuyến 108,5 độ Đông.
+
+                        Cấp độ rủi ro thiên tai cấp 3 được xác định cho các khu vực từ Thanh Hóa đến Quảng Ngãi (bao gồm
+                        đảo Hòn Ngư, Cồn Cỏ và Lý Sơn), Bắc vịnh Bắc Bộ (bao gồm Bạch Long Vỹ, Vân Đồn, Cô Tô, Cát Hải
+                        và đảo Hòn Dấu), cùng với khu vực đất liền từ Ninh Bình đến TP. Huế.
+
+                        Đến 22 giờ ngày 29/9, áp thấp nhiệt đới tiếp tục di chuyển theo hướng Tây Bắc với tốc độ
+                        20–25km/h và suy yếu dần thành một vùng áp thấp. Vị trí trung tâm ở khoảng 20,3 độ vĩ Bắc –
+                        102,3 độ kinh Đông, trên khu vực Thượng Lào. Sức gió ở trung tâm giảm xuống dưới cấp 6, bão tan
+                        hoàn toàn trên đất liền.
+
+                        Khu vực Bắc và Giữa Biển Đông (bao gồm đặc khu Hoàng Sa) có gió mạnh cấp 8-9, vùng gần tâm bão
+                        đi qua cấp 10-13, giật cấp 16, sóng biển cao từ 6,0-8,0m, vùng gần tâm bão 8,0-10,0m, biển
+                        động dữ dội.
+
+                        Từ chiều tối 27/9, vùng biển từ Thanh Hoá đến Quảng Ngãi (bao gồm đảo Hòn Ngư, đặc khu Cồn Cỏ
+                        và Lý Sơn) gió mạnh dần lên cấp 6-7, giật cấp 8-9, sóng biển cao 3,0-5,0m, biển động mạnh. Từ
+                        gần sáng ngày 28/9, gió tăng lên cấp 8-9, vùng gần tâm bão đi qua cấp 10-13, giật cấp 16, sóng
+                        biển cao từ 5,0-7,0m, biển động dữ dội (sức phá hoại cực kỳ lớn, sóng biển cực kỳ mạnh. Đánh
+                        đắm tàu biển có trọng tải lớn).
+
+                        Từ gần sáng ngày 28/9, khu vực Bắc vịnh Bắc Bộ (bao gồm đặc khu Bạch Long Vỹ, Vân Đồn, Cô Tô,
+                        Cát Hải và đảo Hòn Dấu) gió mạnh dần lên cấp 6-7, sau tăng lên cấp 8-9 (biển động rất mạnh, rất
+                        nguy hiểm đối với tàu thuyền), giật cấp 11, sóng biển cao từ 3,0-5,0m, biển động rất mạnh.
+
+                        Mưa lớn từ 28-30/9
+                        Ông Hoàng Đức Cường, Phó cục trưởng Cục Khí tượng Thủy văn (Bộ Nông nghiệp và Môi trường) cho
+                        biết, so với bão số 9 trước đó, bão số 10 không chịu tác động của không khí lạnh, nhiệt độ mặt
+                        biển hiện ở mức cao (29 độ C), hoàn lưu rộng và mạnh, gió mùa Tây Nam cũng đang hoạt động mạnh,
+                        bổ sung ẩm dồi dào. Vì vậy, bão sẽ tiếp tục mạnh lên, không có dấu hiệu giảm nhiều trước khi đổ
+                        bộ.
+
+                        Dự kiến, khi áp sát vùng biển cách Đà Nẵng khoảng 200km (rạng sáng 28-9), bão số 10 có khả năng
+                        đạt cường độ mạnh nhất, cấp 13-14, giật cấp 15-16; vào đến bờ vẫn còn cấp 11-12, ven biển cấp
+                        12-13.
+
+                        Bão số 10 gây sóng lớn, gió mạnh trên biển từ chiều tối nay- Ảnh 3.
+                        Bão số 10 gây mưa rất lớn trong 2 ngày.
+
+                        Dự báo từ chiều 28/9, khu vực ven biển từ Thanh Hóa đến thành phố Huế, trọng tâm từ Nghệ An đến
+                        phía Bắc Quảng Trị bắt đầu có gió mạnh cấp 6-7, tăng dần lên cấp 12 khi bão đổ bộ vào đêm 28-9
+                        đến rạng sáng 29-9. Trên biển, gió mạnh cấp 8-9, vùng gần tâm bão cấp 12-13 từ sáng sớm 28-9,
+                        sóng cao 5-7m.
+
+                        Đáng chú ý, bão số 10 có thể trùng thời điểm triều cường (4-8 giờ sáng), khiến nước dâng do bão
+                        ở vùng từ Bình Định đến Hà Tĩnh đạt 1-2m, riêng Thanh Hóa-Nghệ An cao hơn. Kết hợp triều cường
+                        và sóng lớn, nguy cơ bão số 10 uy hiếp đê kè, vùng nuôi trồng thủy sản ven biển là rất lớn.
+
+                        Hoàn lưu rộng của bão cũng gây mưa trên phạm vi cả nước từ chiều 28 đến 30/9, lượng mưa phổ biến
+                        100-300mm; riêng Thanh Hóa, Hà Tĩnh khoảng 400mm, cục bộ 600mm; nguy cơ ngập úng, lũ quét, sạt
+                        lở đất rất cao. Sau khi vào bờ, bão suy yếu thành áp thấp nhiệt đới, tiếp tục gây mưa lớn tại
+                        Lào, nước lũ có thể dồn về khu vực Thanh Hóa, Nghệ An, Hà Tĩnh...
+
+                        Bão số 10 đang giật cấp 15 trên Biển Đông
+                        Hà Tĩnh dừng các cuộc họp chưa cần thiết để phòng chống bão
+                        Đà Nẵng yêu cầu các hồ thủy điện xả nước để dành dung tích đón lũ
+                        Theo đó, mực nước các hồ thủy điện lúc 1h ngày 27/9 (Sông Bung 2: 599,55 m, Sông Bung 4: 217,56
+                        m, A Vương: 364,62 m, Đak Mi 4: 253,08 m, Sông Tranh 2: 149,46 m) và mực nước tại các trạm thủy
+                        văn Hội Khách, Ái Nghĩa, Nông Sơn và Câu Lâu đều đang ở mức báo động 1 (BĐ1).
+
+                        Nhằm chủ động ứng phó với bão số 10, Trưởng Ban Chỉ huy phòng thủ dân sự thành phố Đà Nẵng yêu
+                        cầu Công ty cổ phần Thủy điện Đak Mi, Công ty Thủy điện Sông Bung, Công ty cổ phần Thủy điện A
+                        Vương, Công ty Thủy điện Sông Tranh tổ chức vận hành hạ mực nước để dành dung tích đón lũ theo
+                        quy định.
+
+                        Cụ thể, yêu cầu các công ty thủy điện tính toán, tổ chức vận hành hạ dần mực nước các hồ thủy
+                        điện Đak Mi 4, Sông Bung 4, Sông Bung 2 về cao trình mực nước như sau: Đak Mi 4: 251,5 m, Sông
+                        Bung 4: 217 m, Sông Bung 2: 598 m trước 18h ngày 28/9. Thời gian bắt đầu vận hành từ 15h ngày
+                        27/9. Chuyển chế độ vận hành theo quy định của Quy trình 1865.
+
+                        Chủ động tính toán, tổ chức vận hành đảm bảo mực nước hồ thủy điện Sông Tranh 2, A Vương không
+                        lớn hơn mực nước đón lũ thấp nhất. Chuyển chế độ vận hành theo quy định của Quy trình 1865.
+
+                        Việc tổ chức vận hành phải bảo đảm nguyên tắc vận hành, tránh đột biến theo quy định. Tổ chức
+                        thực hiện việc thông tin, thông báo đến chính quyền, nhân dân vùng hạ du về
+                    </p>
+                </article>
+                <div class="position">
+                    <img src="https://www.clipartmax.com/png/middle/295-2951370_big-sale-icon-big-sale-icon-png.png"/>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Footer</p>
+        </footer>
+        <div class="float_btn">
+            <button>scroll here</button>
+        </div>
+    </div>
+</body>
+
+</html>
